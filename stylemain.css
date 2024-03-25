@@ -1,0 +1,64 @@
+.container {
+    text-align: center;
+    font-family: calibri;
+}
+
+body {
+    background-color: pink;
+}
+
+.navbar-nav a {
+    color: white;
+}
+.navbar-nav a:hover{
+    color: pink;
+}
+.navbar-nav a.active,
+.navbar-nav a:hover {
+    color: pink!important;
+}
+
+#userGreeting {
+    color: white;
+}
+
+.saldo-container,
+.transaction-container {
+    display: inline-block;
+    width: 45%;
+    background-color: rgba(216, 112, 147, 0.155);
+    border: 2px solid palevioletred; /* Menambahkan garis tepi */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.transaction-item {
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.transaction-item:last-child {
+    margin-bottom: 0; /* Hapus margin bawah untuk item transaksi terakhir */
+}
+
+@media (max-width: 768px) {
+    .navbar-nav {
+        flex-direction: column;
+    }
+    .navbar-toggler {
+        order: -1;
+    }
+}
+
+.income {
+    background-color: #ccffcc;
+    color: black;
+}
+.outcome {
+    background-color: #f06565;
+    color: black;
+}

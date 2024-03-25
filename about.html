@@ -1,26 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Money Tracker - About Us</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <title>About</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="styleabout.css" />
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary p-0 m-0">
-        <div class="container-fluid pt-2 pb-2" style="background-color: #ffd6d6;">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary p-0 mb-5 fixed-top">
+        <div class="container-fluid pt-2 pb-2" style="background-color: palevioletred;">
             <img src="gambar/money.png" alt="Money Tracker Image" style="max-width: 5%;" class="me-4">
             <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-            </button>            
+            </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav" style="width: 95%; display: flex; justify-content: space-between;">
-                    <li class="nav-item" id="helloUser">
-                        <a class="nav-link" href="#">Hello, </a>
+                    <li class="nav-item">
+                        <span class="nav-link" id="userGreeting"></span>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="main.html">Main</a>
+                        <a class="nav-link " href="main.html">Main</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="income.html">Income</a>
@@ -29,7 +30,7 @@
                         <a class="nav-link" href="outcome.html">Outcome</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">About us</a>
+                        <a class="nav-link active" href="about.html">About us</a>
                     </li>
                 </ul>
             </div>
@@ -37,42 +38,42 @@
     </nav>
 
     <div class="container mt-5">
-        <h1 id="team-name" class="text-center">GIRLZZZ</h1>
+        <h1 id="team-name" class="text-center" style="margin-top: 50px;">GIRLZZZ</h1>
         <div class="row justify-content-center"> 
             <div class="col-md-4">
                 <div class="team-member">
-                    <img src="gambar/anggota1.jpg" alt="Anggota 1">
-                    <h2>Anggota 1</h2>
-                    <p>(nim)</p>
+                    <img src="gambar/alya.jpg" alt="Anggota 1">
+                    <h4 style="margin-top: 30px;">Alya Virgia Aurelline</h4>
+                    <p>00000111025</p>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="team-member">
-                    <img src="gambar/anggota2.jpg" alt="Anggota 2">
-                    <h2>Anggota 2</h2>
-                    <p>(nim)</p>
+                    <img src="gambar/callista.jpg" alt="Anggota 2">
+                    <h4 style="margin-top: 30px;">Callista Jasmine Bandono</h4>
+                    <p>00000110963</p>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="team-member">
-                    <img src="gambar/anggota3.jpg" alt="Anggota 3">
-                    <h2>Anggota 3</h2>
-                    <p>(nim)</p>  
+                    <img src="gambar/vika.jpg" alt="Anggota 3">
+                    <h4 style="margin-top: 30px;">Vika Gisella</h4>
+                    <p>00000092194</p>
                 </div>
             </div>
         </div>
     </div>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script>
-        const username = localStorage.getItem('username');
 
-        // Periksa apakah nama pengguna ada
-        if (username) {
-            // Jika ada, tambahkan ke teks pada elemen navbar
-            document.getElementById('helloUser').innerHTML = '<a class="nav-link" href="#">Hello, ' + username + '!</a>';
-        }
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script>
+        window.addEventListener('load', function() {
+            var username = localStorage.getItem('username');
+            if (username) {
+                document.getElementById('userGreeting').textContent = "Hello, " + username + "!";
+            }
+        });
     </script>
-    
 </body>
 </html>

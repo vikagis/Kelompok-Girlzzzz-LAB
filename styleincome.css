@@ -1,0 +1,31 @@
+body {
+    background-color: pink
+}
+
+.container {
+    text-align: center;
+    font-family: calibri;
+}
+.navbar-nav a {
+    color: white;
+}
+.navbar-nav a:hover{
+    color: pink;
+}
+.navbar-nav a.active,
+.navbar-nav a:hover {
+    color: pink!important;
+}
+
+#userGreeting {
+    color: white;
+}
+
+.container1 {
+    position: relative;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    padding: 20px;
+    backdrop-filter: blur(2px);
+}
